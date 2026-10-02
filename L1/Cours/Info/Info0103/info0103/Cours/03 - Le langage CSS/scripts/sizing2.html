@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Fusion de marge</title> 
+    <style>
+#container {
+    border: 0px solid black;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    background-color: silver;
+}
+#boite1, #boite2 {
+    border: 1px solid black;
+    background-color: teal;
+    width: 100px;
+    height: 100px;
+    padding: 0px;
+    margin: 0px;
+}
+    </style>
+  </head>
+  <body>
+    <h1>Fusion de marge</h1>
+    <div id="container">
+      <div id="boite1">La</div><div id="boite2">Ici</div>
+    </div>
+    <div>Taille des boîtes : 100 par 100 ; bordure de 1px</div>
+    <div id="displaydim">Taille occupée : 100 x 100</div>
+    <div>
+      <label for="setbottom">Boite 1, margin-bottom: </label>
+      <input type="range" id="setbottom" min="0" max="50" value="0" step="1" onchange="update('bottom')">
+      <span id="displaybottom">0</span>
+    </div>
+    <div>
+      <label for="setpadding1">Boite 1, padding: </label>
+      <input type="range" id="setpadding1" min="0" max="50" value="0" step="1" onchange="update('padding1')">
+      <span id="displaypadding1">0</span>
+    </div>
+    <div>
+      <label for="settop">Boite 2, margin-top: </label>
+      <input type="range" id="settop" min="0" max="50" value="0" step="1" onchange="update('top')">
+      <span id="displaytop">0</span>
+    </div>
+    <div>
+      <label for="setpadding2">Boite 2, padding: </label>
+      <input type="range" id="setpadding2" min="0" max="50" value="0" step="1" onchange="update('padding2')">
+      <span id="displaypadding2">0</span>
+    </div>
+    <script>
+function updateDim() {
+    document.querySelector('#displaydim').innerHTML = "Taille occupée : " +
+        document.querySelector('#container').clientWidth + " x " +
+        document.querySelector('#container').clientHeight;
+    document.querySelector('#displaybottom').innerHTML = document.querySelector('#setbottom').value;
+    document.querySelector('#displaytop').innerHTML = document.querySelector('#settop').value;
+    document.querySelector('#displaypadding1').innerHTML = document.querySelector('#setpadding1').value;
+    document.querySelector('#displaypadding2').innerHTML = document.querySelector('#setpadding2').value;
+}
+function update(type) {
+    switch(type) {
+        case 'bottom':
+            document.querySelector('#boite1').style.marginBottom = document.querySelector('#setbottom').value + "px";
+            break;
+        case 'top':
+            document.querySelector('#boite2').style.marginTop = document.querySelector('#settop').value + "px";
+            break;
+        case 'padding1':
+            document.querySelector('#boite1').style.padding = document.querySelector('#setpadding1').value + "px";
+            break;
+        case 'padding2':
+            document.querySelector('#boite2').style.padding = document.querySelector('#setpadding2').value + "px";
+            break;
+    }
+    updateDim();
+}
+window.addEventListener("load", (event) => {
+  updateDim();
+});
+    </script>
+  </body>
+</html>

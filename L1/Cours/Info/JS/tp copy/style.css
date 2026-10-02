@@ -1,0 +1,42 @@
+.conteneur {
+  display: grid;
+  place-content: center;
+}
+.contenu,
+.contenu2 {
+  width: 50%;
+  min-width: 800px;
+  height: 400px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  border-radius: 5px;
+  border: 1px solid black;
+  overflow: auto;
+}
+button {
+  margin: 10px auto;
+}
+h1 {
+  margin: 10px auto;
+}
+body {
+  font-family: monospace;
+}
+.message {
+  border-radius: 10px;
+  padding: 5px;
+  margin: 2px;
+  word-wrap: break-word;
+}
+.droite {
+  border: 1px solid #00ff00;
+  background-color: #aaffaa;
+  margin-left: 100px;
+}
+.gauche {
+  border: 1px solid #0000ff;
+  background-color: #aaaaff;
+  margin-right: 100px;
+}

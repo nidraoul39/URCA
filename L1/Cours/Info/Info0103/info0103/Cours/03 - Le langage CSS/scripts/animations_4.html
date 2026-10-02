@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Illustration des animations</title> 
+    <style>
+.rotate-scale-down {
+    animation: rotate-scale-down 0.65s ease-out ;
+}
+@keyframes rotate-scale-down {
+  0% {
+    transform: scale(1) rotateZ(0);
+  }
+  50% {
+    transform: scale(0.5) rotateZ(180deg);
+  }
+  100% {
+    transform: scale(1) rotateZ(360deg);
+  }
+}
+.conteneur {
+    width: 200px;
+    height: 280px;
+    border: 1px black solid;
+    padding: 10px;
+}
+    </style>
+  </head>
+  <body>
+    <h1>Exemple d'utilisation d'Anima</h1>
+
+    <div class="conteneur">
+    <p class="rotate-scale-down">
+        Le texte avec la classe qui va bien.
+    </p>
+    <p class="rotate-scale-down">
+       <img src="chuck6.jpg"  width="200px">
+    </p>
+    </div>
+  </body>
+</html>

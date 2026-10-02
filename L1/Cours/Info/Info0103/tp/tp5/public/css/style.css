@@ -1,0 +1,159 @@
+table {
+  border-collapse: collapse;
+  border: 3px solid red;
+}
+th, td {
+  padding: 5px;
+}
+tbody td {
+  text-align: center;
+}
+tbody tr:nth-child(odd) {
+  background-color: #ff5171;
+}
+tbody tr:nth-child(even) {
+  background-color: #f28c9f;
+}
+th {
+  background-color: #eb3355;
+}
+table caption {
+ font-style: italic;
+ font-size: 0.9em;
+}
+/* Question 3.2 : test des différentes familles */
+body {
+    /*font-family: serif;*/
+    /*#font-family: sans-serif;*/
+    /*font-family: monospace;*/
+    /*font-family: cursive;*/
+    /*font-family: fantasy;*/
+}
+/* Question 3.3 : police Arial */
+body {
+    /* font-family: Arial; */
+}
+/* Chapitre 4 */
+body {
+    font-family: 'Mooli', sans-serif;
+    font-size: 1.2em;
+}
+figcaption {
+    font-style: italic;
+}
+h1 {
+    color: #CD5C5C;
+    text-transform: uppercase;
+}
+h2, h3, h4, h5, h6 {
+    color: #F08080;
+}
+p {
+    letter-spacing: 0.1rem;
+}
+/* Chapitre 5 */
+ul {
+    /* list-style-type: disc; */
+    /* list-style-type: circle; */
+    /* list-style-type: "\1F3AC" */
+    /* list-style-image: url("../images/star.png"); */
+    list-style-type: none
+}
+ul li {
+    background-image: url("../images/star.png");
+    background-repeat: no-repeat;
+    background-size: 1.2rem;
+    padding-left: 2rem;
+}
+
+/* Chapitre 6 */
+.saison1 li, .saison2 li, .saison3 li, .saison4 li {
+    background-repeat: no-repeat;
+    background-size: 1.2rem;
+    padding-left: 2rem;
+}
+
+.saison1 li {
+    background-image: url("../images/will.png");
+}
+
+.saison2 li {
+    background-image: url("../images/dustin.png");
+}
+
+.saison3 li {
+    background-image: url("../images/mike.png");
+}
+
+.saison4 li {
+    background-image: url("../images/lucas.png");
+}
+
+body {
+    background-color: #000000;
+    color: red;
+}
+
+h1, h2, h3 {
+    background-image: linear-gradient(90deg , #430000 20%, black 80%);
+    border: 1px solid red;
+    border-radius: 10px;
+    padding: 10px 0px 10px 20px;
+}
+nav{
+    position: sticky;
+    top: 0;
+    padding: 2px;
+
+}
+nav > ul {
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+nav > ul > li {
+    background: none;
+    display: inline-block;
+    padding: 0;
+    border-radius: 5px;
+    border: 2px solid #CD5C5C;
+    background-color: #430000;
+    grid-column: 1 / 4;
+    grid-row: 1;
+
+}
+nav > ul > li > a {
+    text-decoration: none;
+    color : red;
+    padding-left: 1em;
+    padding-right: 1em;
+    
+}
+nav > ul > li :hover{
+    background-color: #F08000;
+    transition: 1s;
+}
+.current {
+    background-color: #F08000;
+    opacity: 0.5;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+
+}
+.contenue{
+    grid-column: 2;
+    grid-row: 3;
+    margin-right: 0;
+    margin-left: 0;
+}
+.titre{
+    grid-column: 2;
+    grid-row: 2;
+    margin-right: 0;
+    margin-left: 0;
+}

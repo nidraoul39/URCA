@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stranger Things - Inscription</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/style.css">
+    
+
+</head>
+
+    <script>
+    function choix() {
+        let periode = document.getElementById("periode_newsletter_div");
+        if(document.getElementById("newsletter").checked)
+            periode.style.display = "block";
+        else
+            periode.style.display = "none";
+        let format = document.getElementById("format_poster_div");
+        if(document.getElementById("poster").checked)
+            format.style.display = "block";
+        else
+            format.style.display = "none";
+    }
+    function reinitialiser() {
+    event.preventDefault();
+    document.querySelector("form").reset();
+    choix();
+}
+function niveau() {
+    let valeur = document.getElementById("niveau_fan").value;
+    if(valeur > 8)
+        document.getElementById("btnValider").disabled = false;
+    else
+        document.getElementById("btnValider").disabled = true;
+}
+    </script>
+    
+
+
+    <body>
+        <div class="container">
+    
+            <nav>
+                <ul>
+                <li> <a href="index.html">Index</a> </li>
+                <li> <a href="synopsis.html">Synopsis</a> </li>
+                <li> <a href="saisons.html">Saisons</a> </li>
+                <li> <a href="acteurs.html">Acteurs</a> </li>
+                <li> <a href="chiffres.html">Chiffres</a> </li>
+                <li> <a class="current">fan-club</a> </li>
+
+                </ul>
+            </nav>
+            
+            <div id="titre">
+                <h1>Inscription au fan-club</h1>
+            </div>
+
+            <div id="contenu">
+                <form action="https://www.cyrilrabat.fr/test.php" method="post">
+                    <div>
+                        <label for="nom">Nom</label>
+                        <input type="text" id="nom" name="nom" required autofocus><br>
+                    </div>
+                    <div>
+                    <label for="prenom">Prenom</label>
+                    <input type="text" name="prenom" id="prenom" required><br>
+                    </div>
+                    <div>
+                    <label for="mail">mail</label>
+                    <input type="email" name="email" id="email" required><br>
+                    </div>
+                    <div>
+                    <label for="date_naissance">date de naissance</label>
+                    <input type="date" name="date_naissance" id="date_naissance" required><br>
+                    </div>
+                    <label for="option">option choisies</label>
+                    <fieldset>
+                        <input type="checkbox" name="newsletter" id="newsletter" value="oui" onclick="javascript:choix()">
+                        <label for="newsletter">s'abonner a la newsletter</label>
+                        <input type="checkbox" name="poster" id="poster" value="oui" onclick="javascript:choix()">
+                        <label for="poster">recevoir le poster</label>
+                        <input type="checkbox" name="instagram" id="instagram" value="oui">
+                        <label for="instagram">intégrer le groupe instagram</label>
+                    </fieldset>
+                    <div id="periode_newsletter_div">
+                        <select name="periode_newsletter" id="periode_newsletter">
+                            <option value="jour">Tous les jours</option>
+                            <option value="semaine">Tous les semaines</option>
+                            <option value="mois">tous les mois</option>
+                            <option value="an">Tous les ans</option>
+                        </select>
+                    </div>
+
+                    <div id="format_poster_div">
+                        <select name="format_poster" id="format_poster">
+                            <option value="A5">Format A5</option>
+                            <option value="A4">Format A4</option>
+                            <option value="A3">Format A3</option>
+                            <option value="A2">Format A2</option>
+                        </select>
+                    </div>
+
+                    
+                    <br>
+
+                    <label for="pb">avez vous des pb cardiaque</label>
+                    <fieldset>
+                        <input type="radio" name="cardiaque" id="cardiaque" value="oui">
+                        <label for="cardiaque">oui</label>
+                        <input type="radio" name="cardiaque" id="cardiaque" value="non">
+                        <label for="cardiaque">non</label>
+                        <input type="radio" name="cardiaque" id="cardiaque" value="npp">
+                        <label for="cardiaque">ne se prononce pas</label>
+                    </fieldset>
+                    <label for="text">niveau de fan (entre 1 et 10) </label>
+                    <input type="range" name="niveau_fan" id="niveau_fan" min="1" max="10" value="10" step="1" onchange="javascript:niveau()">
+                    <br>
+                    <input type="submit" name="btnValider" id="btnValider">
+                    <input type="reset" name="Réinitialiser" id="Réinitialiser" onclick="javascript:reinitialiser()">
+                </form>
+
+            </div>
+
+        </div>
+    </body>
+</html>

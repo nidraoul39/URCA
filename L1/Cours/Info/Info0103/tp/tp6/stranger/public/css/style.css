@@ -1,0 +1,168 @@
+body {
+    font-family: 'Mooli', sans-serif;
+    font-size: 1.2em;
+    background-color: #000000;
+    color: red;
+}
+p {
+    letter-spacing: 0.1rem;
+}
+
+/* Pour les tableaux */
+table {
+  border-collapse: collapse;
+  border: 3px solid red;
+}
+th, td {
+  padding: 5px;
+}
+tbody td {
+  text-align: center;
+}
+tbody tr:nth-child(odd) {
+  background-color: #ff5171;
+}
+tbody tr:nth-child(even) {
+  background-color: #f28c9f;
+}
+th {
+  background-color: #eb3355;
+}
+table caption {
+ font-style: italic;
+ font-size: 0.9em;
+}
+
+/* Pour les figures */
+figcaption {
+    font-style: italic;
+}
+
+/* Pour les titres */
+h1 {
+    color: #CD5C5C;
+    text-transform: uppercase;
+}
+h2, h3, h4, h5, h6 {
+    color: #F08080;
+}
+h1, h2, h3 {
+    background-image: linear-gradient(90deg , #430000 20%, black 80%);
+    border: 1px solid red;
+    border-radius: 10px;
+    padding: 10px 0px 10px 20px;
+}
+
+/* Pour les listes */
+ul {
+    list-style-type: none
+}
+ul li {
+    background-image: url("../images/star.png");
+    background-repeat: no-repeat;
+    background-size: 1.2rem;
+    padding-left: 2rem;
+}
+
+/* Classes */
+.saison1 li, .saison2 li, .saison3 li, .saison4 li {
+    background-repeat: no-repeat;
+    background-size: 1.2rem;
+    padding-left: 2rem;
+}
+
+.saison1 li {
+    background-image: url("../images/will.png");
+}
+
+.saison2 li {
+    background-image: url("../images/dustin.png");
+}
+
+.saison3 li {
+    background-image: url("../images/mike.png");
+}
+
+.saison4 li {
+    background-image: url("../images/lucas.png");
+}
+
+/* Menu */
+nav {
+    /* background-color: #eeeeee; */
+    background-color: #430000;
+}
+body {
+    margin: 0px;
+}
+nav ul {
+    margin: 0px;
+    display: inline-block;
+}
+nav li {
+    background-image: none;
+}
+nav li {
+    display: inline-block;
+    padding-left: 0;
+}
+nav {
+    text-align: center; 
+}
+nav a {
+    border: 2px solid #CD5C5C;
+    border-radius: 5px;
+    background-color: #430000;
+    text-decoration: none;
+    padding: 0 1em;
+    color: red;
+}
+nav {
+    position: sticky;
+    top: 0px;
+    padding: 2px;
+}
+nav li {
+    margin: 5px;
+}
+nav ul {
+    padding-left: 0;
+}
+nav a:hover {
+    background-color: #F08080;
+    transition-duration: 1s;
+}
+.current {
+    background-color: #F08080;
+    opacity: 0.5;
+}
+
+/* Grille */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+}
+nav {
+    grid-column: 1 / 4;
+    grid-row: 1;
+}
+#titre {
+    grid-column: 2;
+    grid-row: 2;
+}
+#contenu {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+figure {
+    text-align: center;
+}
+img {
+    max-width: 90%;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

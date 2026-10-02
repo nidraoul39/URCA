@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "title": "Voir Paris et repartir",
+    "description": "Découvrez la ville lumière et visitez ses monuments emblématiques."
+  },
+  {
+    "id": 2,
+    "title": "Dubaï, aïe, aïe, aïe !",
+    "description": "Venez découvrir cette ville extraordinaire d'Arabie Saoudite."
+  },
+  {
+    "id": 3,
+    "title": "Amsterdam",
+    "description": "Découvrez la capital des Pays-Bas et son partimoine artistique hors normes."
+  },
+  {
+    "id": 4,
+    "title": "Madrid la magnifique",
+    "description": "L'une des plus belles villes d'Espagne où il n'y a pas que du football (mais y'en a)."
+  },
+  {
+    "id": 5,
+    "title": "Rome la majestueuse",
+    "description": "Une architecture et une culture de presque 3000 ans..."
+  }
+]

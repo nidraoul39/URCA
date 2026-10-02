@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Les chaînes de caractères</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Les chaînes de caractères">
+    <meta name="author" content="Cyril Rabat">
+  </head>
+  <body>
+    <h1>Les chaînes de caractères</h1>
+    <p>Ouvrez la console...</p>
+<script>
+// Chaînes de caractères : déclarations
+const chaine1 = "Une chaîne...";
+console.log(chaine1);
+const chaine2 = 'Une autre chaîne...';
+console.log(chaine2);
+const chaine3 = `Une template string ${chaine1} - ${chaine2}.`;
+console.log(chaine3);
+console.log("Taille de la chaîne : " + chaine3.length);
+
+// Comparaisons
+let s1 = "toto";
+let s2 = "toto";
+let s3 = new String("toto");
+let s4 = new String("toto");
+
+console.log("s1 == s2 : " + (s1 == s2));
+console.log("s1 === s2 : " + (s1 === s2));
+console.log("s1 == s3 : " + (s1 == s3));
+console.log("s1 === s3 : " + (s1 === s3));
+console.log("s3 == s4 : " + (s3 == s4));
+console.log("s3 === s4 : " + (s3 === s4));
+</script>
+  </body>
+</html>

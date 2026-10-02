@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Les chaînes de caractères - recherches</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Les chaînes de caractères - recherches">
+    <meta name="author" content="Cyril Rabat">
+  </head>
+  <body>
+    <h1>Les chaînes de caractères - recherches</h1>
+    <p>Ouvrez la console...</p>
+<script>
+let s = "Bonjour";
+
+console.log("s = " + s);
+console.log('s.indexOf("n") : ' + s.indexOf("n")); // affiche 1
+console.log('s.indexOf("o", 2) : ' + s.indexOf("o", 2)); // retourne 4
+console.log('s.lastIndexOf("o") : ' + s.lastIndexOf("o")); // retourne 4
+console.log('s.lastIndexOf("o", 3) : ' + s.lastIndexOf("o", 3)); // retourne 1
+console.log('s.includes("o", 5) : ' + s.includes("o", 5)); // retourne false
+console.log('s.startsWith("Bo") : ' + s.startsWith("Bo")); // retourne true
+console.log('s.endsWith("four") : ' + s.endsWith("four")); // retourne false
+</script>
+  </body>
+</html>

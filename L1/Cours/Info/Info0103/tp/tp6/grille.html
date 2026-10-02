@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+<script>
+  bouton = document.getElementById("boutonHaut");
+  window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      bouton.style.opacity = 100;
+    } else {
+      bouton.style.opacity = 0;
+    }
+  };
+  function fonctionTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+<a href="javascript:fonctionTop()" id="boutonHaut">&#x2B9D;</a>
+<body>
+    <div id="Titre">
+        <h1>Travaux pratique 6</h1>
+    </div>
+    <div id="Menu">
+        <nav>
+            <ul>
+                <li><a href="lien1">lien1</a></li>
+                <li><a href="lien2">lien2</a></li>
+                <li><a href="lien3">lien3</a></li>
+                <li><a href="lien4">lien4</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="Contenu">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsam corrupti sunt temporibus, reprehenderit aperiam distinctio architecto fuga error amet dignissimos aliquid suscipit iure, quod accusamus iusto. Quibusdam, quam officia.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsam corrupti sunt temporibus, reprehenderit aperiam distinctio architecto fuga error amet dignissimos aliquid suscipit iure, quod accusamus iusto. Quibusdam, quam officia.</p>
+    
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsam corrupti sunt
+    
+        temporibus, reprehenderit aperiam distinctio architecto fuga error amet dignissimos aliquid
+        suscipit iure, quod accusamus iusto. Quibusdam, quam officia.</p>
+    
+        <div id="infos">
+
+            <div class="info">
+                <h1>Info 1</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia exercitationem ducimus earum debitis quia eaque illo, odit temporibus sunt molestiae eos placeat, numquam eius consequuntur facere, similique id cumque quo!</p>
+            </div>
+            <div class="info">
+                <h1>Info 2</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam nesciunt quidem facilis nam quaerat? Quam in quaerat est dolores harum qui aspernatur maiores incidunt vel quod? Fuga magnam atque numquam.</p>
+            </div>
+            <div class="info">
+                <h1>Info 3</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum qui nisi inventore, est nihil quisquam fugiat ea hic dolorum neque, vel totam delectus debitis minus eaque voluptatem dolorem cum odit?</p>
+            </div>
+            <div class="info">
+                <h1>Info 4</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo magnam, recusandae enim amet neque laboriosam velit. Quia, tenetur labore error quos quas, similique natus magni itaque inventore distinctio dolores.</p>
+            </div> 
+
+        </div>
+    </div>
+    <div id="PiedDePage">
+        <footer>
+            <p>Copyright © 2025 MonSiteWeb. Tous droits réservés.</p>
+        </footer>
+    </div>
+    <div id="Logo">
+        <img src="public/image/logo.png" alt="Logo du site">
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Illustration de Flexbox</title> 
+    <style>
+.conteneur {
+    border: 1px solid #6C8EBF;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 1px;
+    background-color: #DAE8FC;
+    height: 400px;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+.box {
+    border: 1px solid #D79B00;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 1px;
+    background-color: #FFE6CC;
+    flex: 0;
+}
+    </style>
+  </head>
+  <body>
+    <h1>Illustration de Flexbox</h1>
+    <p>
+      <strong>Nombre de boîtes :</strong> <span id="nbbox">6</span>
+      <button onclick="update_box(-1)">-</button>
+      <button onclick="update_box(1)">+</button>
+    </p>
+    <p>
+      <strong>flex:</strong> <span id="flex">0</span>
+      <button onclick="update_flex(0)">0</button>
+      <button onclick="update_flex(1)">1</button>
+      <button onclick="update_flex('25px')">25px</button>
+    </p>
+    <p>
+      <strong>flex-direction:</strong>
+      <button onclick="flex_direction('row')">row</button>
+      <button onclick="flex_direction('column')">column</button>
+    </p>
+    <p>
+      <strong>flex-wrap:</strong>
+      <button onclick="flex_wrap('nowrap')">nowrap</button>
+      <button onclick="flex_wrap('wrap')">wrap</button>
+      <button onclick="flex_wrap('wrap-reverse')">wrap-reverse</button>
+    </p>
+    <p>
+      <strong>justify-content (avec flex = 0):</strong>
+      <button onclick="justify_content('flex-start')">flex-start</button>
+      <button onclick="justify_content('flex-end')">flex-end</button>
+      <button onclick="justify_content('center')">center</button>
+      <button onclick="justify_content('space-between')">space-between</button>
+    </p>
+    <p>
+      <strong>align-items (avec align-content:stretch):</strong>
+      <button onclick="align_items('start')">start</button>
+      <button onclick="align_items('end')">end</button>
+      <button onclick="align_items('center')">center</button>
+      <button onclick="align_items('stretch')">stretch</button>
+    </p>
+    <p>
+      <strong>align-content (avec wrap):</strong>
+      <button onclick="align_content('flex-start')">flex-start</button>
+      <button onclick="align_content('flex-end')">flex-end</button>
+      <button onclick="align_content('center')">center</button>
+      <button onclick="align_content('stretch')">stretch</button>
+    </p>
+    <div class="conteneur" id="conteneur">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>      
+      <div class="box"></div>
+    </div>
+    <script>
+var nbBox = 6;
+var flex = 0;
+function update_box(value) {
+    nbBox += value;
+    if(nbBox < 1)
+        nbBox = 1;
+    else if(nbBox > 10)
+        nbBox = 10;
+    document.getElementById('nbbox').innerHTML = nbBox;
+    document.getElementById('conteneur').innerHTML = "";
+    for(let i = 0; i < nbBox; i++)
+        document.getElementById('conteneur').innerHTML += '<div class="box"></div>';
+}
+function search_rules(title) {
+    let i = 0, j;
+    let rule = null;
+    while((i < document.styleSheets.length) && (rule == null)) {
+        j = 0;
+        while((j < document.styleSheets[i].rules.length) && (document.styleSheets[i].rules[j].selectorText != title)) {
+            j++;
+        }
+        if(j < document.styleSheets[i].rules.length)
+            rule = document.styleSheets[i].rules[j];
+        i++;
+    }
+    return rule;    
+}
+function update_flex(value) {
+    let rule = search_rules('.box');
+    rule.style.flex = value;
+    document.getElementById('flex').innerHTML = value;
+}
+function flex_direction(value) {
+    document.getElementById('conteneur').style.flexDirection = value;
+}
+function flex_wrap(value) {
+    document.getElementById('conteneur').style.flexWrap = value;
+}
+function justify_content(value) {
+    document.getElementById('conteneur').style.justifyContent = value;
+}
+function align_items(value) {
+    document.getElementById('conteneur').style.alignItems = value;
+}
+function align_content(value) {
+    document.getElementById('conteneur').style.alignContent = value;
+}
+    </script>
+  </body>
+</html>

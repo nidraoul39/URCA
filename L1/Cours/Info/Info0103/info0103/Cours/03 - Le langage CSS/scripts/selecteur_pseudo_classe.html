@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Pseudo-classes et pseudo-éléments</title> 
+    <style>
+a:hover {
+    color: green;
+}
+.maclasse::first-line {
+    color: red;
+}
+    </style>
+  </head>
+  <body>
+    <h1>Utilisation des pseudo-classes et pseudo-éléments</h1>
+    <p>
+      Allez sur <a href="https://www.licence-info.fr" target="_blank">le site de la Licence Info</a>.
+      Passez la souris sur le lien.
+    </p>
+    <p class="maclasse">
+       Voici un exemple de texte qui est très long.
+       Evidemment, en fonction de la taille de la fenêtre, la première ligne est plus ou moins grande.
+       Le pseudo-élément permet de la sélectionner.
+       D'ailleurs, vous pouvez ajouter des retours à la ligne dans le code HTML et cela n'a pas d'influence : c'est bien la première ligne affichée.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.3.7/css/dataTables.dataTables.min.css"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.datatables.net/2.3.7/js/dataTables.min.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="script2.js" defer></script>
+  </head>
+  <body>
+    <table id="myTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Country</th>
+          <th>Phone</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Margot Bailly</td>
+          <td>brigitte.herve@guillou.com</td>
+          <td>Saint-Kitts et Nevis</td>
+          <td>+33 3 30 54 77 35</td>
+        </tr>
+        <tr>
+          <td>Margot Maillet</td>
+          <td>marc.hubert@masson.com</td>
+          <td>Sainte Lucie</td>
+          <td>0194407740</td>
+        </tr>
+        <tr>
+          <td>Juliette Faivre</td>
+          <td>kcolin@dbmail.com</td>
+          <td>Italie</td>
+          <td>+33 (0)2 09 54 63 28</td>
+        </tr>
+        <tr>
+          <td>Marguerite Guichard</td>
+          <td>lambert.margot@dbmail.com</td>
+          <td>Falkland (Île)</td>
+          <td>09 29 28 90 92</td>
+        </tr>
+        <tr>
+          <td>Philippe Guyon</td>
+          <td>ynoel@thibault.org</td>
+          <td>Guinée-Bissau</td>
+          <td>+33 5 30 47 08 25</td>
+        </tr>
+        <tr>
+          <td>Grégoire Giraud</td>
+          <td>moreau.stephanie@laposte.net</td>
+          <td>Sénégal</td>
+          <td>0401611523</td>
+        </tr>
+        <tr>
+          <td>Alain-Gilles Moreau</td>
+          <td>gomez.pauline@thibault.com</td>
+          <td>Malte</td>
+          <td>+33 5 34 16 59 56</td>
+        </tr>
+        <tr>
+          <td>Joseph Leroux-Lacroix</td>
+          <td>jacqueline31@lamy.com</td>
+          <td>Malawi</td>
+          <td>09 48 25 10 02</td>
+        </tr>
+        <tr>
+          <td>Édith Ruiz</td>
+          <td>gregoire.rousseau@free.fr</td>
+          <td>Bangladesh</td>
+          <td>+33 4 41 57 40 67</td>
+        </tr>
+        <tr>
+          <td>Madeleine Bonnin</td>
+          <td>tpereira@camus.com</td>
+          <td>Nouvelle-Zélande</td>
+          <td>+33 (0)7 56 16 19 28</td>
+        </tr>
+        <tr>
+          <td>Christine Goncalves</td>
+          <td>joseph.margaux@hoarau.com</td>
+          <td>Mariannes du Nord (Îles)</td>
+          <td>+33 (0)1 27 16 32 12</td>
+        </tr>
+        <tr>
+          <td>Emmanuelle Roger-Lebreton</td>
+          <td>riviere.renee@yahoo.fr</td>
+          <td>Cap Vert</td>
+          <td>06 95 94 91 14</td>
+        </tr>
+        <tr>
+          <td>Margaud Da Costa</td>
+          <td>jacques.parent@gmail.com</td>
+          <td>Fidji (République des)</td>
+          <td>+33 3 97 07 74 91</td>
+        </tr>
+        <tr>
+          <td>Alice Vallee</td>
+          <td>william.roussel@tele2.fr</td>
+          <td>Maurice</td>
+          <td>0920068487</td>
+        </tr>
+        <tr>
+          <td>Laure Bourgeois-Remy</td>
+          <td>theophile38@lopes.fr</td>
+          <td>Libye</td>
+          <td>05 26 74 50 31</td>
+        </tr>
+        <tr>
+          <td>Claire Lecoq</td>
+          <td>eguyot@thomas.net</td>
+          <td>Trinité et Tobago</td>
+          <td>02 27 68 00 90</td>
+        </tr>
+        <tr>
+          <td>Alex Le Gimenez</td>
+          <td>sebastien.lemaire@live.com</td>
+          <td>Zambie</td>
+          <td>0820942431</td>
+        </tr>
+        <tr>
+          <td>Robert Adam</td>
+          <td>maryse20@live.com</td>
+          <td>Antilles néerlandaises</td>
+          <td>03 04 86 67 05</td>
+        </tr>
+        <tr>
+          <td>Jérôme Mary</td>
+          <td>nathalie.barbier@tele2.fr</td>
+          <td>Christmas (Île)</td>
+          <td>0199499416</td>
+        </tr>
+        <tr>
+          <td>Brigitte Le Vidal</td>
+          <td>bernadette16@marchal.com</td>
+          <td>Sainte Hélène</td>
+          <td>+33 6 09 69 45 82</td>
+        </tr>
+        <tr>
+          <td>Rémy de Lacroix</td>
+          <td>virginie22@lemonnier.fr</td>
+          <td>République Dominicaine</td>
+          <td>+33 4 80 87 02 76</td>
+        </tr>
+        <tr>
+          <td>Michelle Michaud</td>
+          <td>valerie01@chretien.fr</td>
+          <td>Kazakhstan</td>
+          <td>+33 (0)1 39 56 67 72</td>
+        </tr>
+        <tr>
+          <td>Claudine De Oliveira-Faivre</td>
+          <td>gerard.ledoux@yahoo.fr</td>
+          <td>Laos</td>
+          <td>06 98 26 31 61</td>
+        </tr>
+        <tr>
+          <td>Pierre Nguyen</td>
+          <td>mpelletier@yahoo.fr</td>
+          <td>Bahrain</td>
+          <td>+33 (0)1 76 97 52 01</td>
+        </tr>
+        <tr>
+          <td>Emmanuel Albert</td>
+          <td>augustin82@maillet.com</td>
+          <td>Cameroun</td>
+          <td>08 16 90 77 07</td>
+        </tr>
+        <tr>
+          <td>Geneviève Marie</td>
+          <td>emmanuel.salmon@laposte.net</td>
+          <td>Trinité et Tobago</td>
+          <td>+33 (0)5 13 62 70 90</td>
+        </tr>
+        <tr>
+          <td>Robert Tessier</td>
+          <td>celine.picard@orange.fr</td>
+          <td>Micronésie (États fédérés de)</td>
+          <td>+33 (0)6 34 09 77 36</td>
+        </tr>
+        <tr>
+          <td>Margaret du Lecoq</td>
+          <td>sdias@rocher.fr</td>
+          <td>Royaume-Uni</td>
+          <td>0899427848</td>
+        </tr>
+        <tr>
+          <td>Nicole du Goncalves</td>
+          <td>qparis@noos.fr</td>
+          <td>Corée du Nord</td>
+          <td>+33 (0)8 06 36 42 76</td>
+        </tr>
+        <tr>
+          <td>Honoré du Besson</td>
+          <td>fdupuy@laposte.net</td>
+          <td>Taiwan</td>
+          <td>0177714325</td>
+        </tr>
+        <tr>
+          <td>Véronique Guillet</td>
+          <td>robin.gabriel@free.fr</td>
+          <td>Yemen</td>
+          <td>+33 (0)4 19 47 16 35</td>
+        </tr>
+        <tr>
+          <td>Gérard Henry-Chretien</td>
+          <td>bdumas@munoz.com</td>
+          <td>Albanie</td>
+          <td>+33 1 12 16 79 55</td>
+        </tr>
+        <tr>
+          <td>Jeannine Adam</td>
+          <td>thibault.barthelemy@club-internet.fr</td>
+          <td>Slovénie</td>
+          <td>+33 (0)2 04 84 98 68</td>
+        </tr>
+        <tr>
+          <td>Nicole Pereira-Seguin</td>
+          <td>sleger@live.com</td>
+          <td>Singapour</td>
+          <td>0596572465</td>
+        </tr>
+        <tr>
+          <td>Charles Remy</td>
+          <td>sverdier@club-internet.fr</td>
+          <td>Suriname</td>
+          <td>+33 (0)2 58 26 44 02</td>
+        </tr>
+        <tr>
+          <td>Guy Gros</td>
+          <td>thierry.guibert@lemonnier.com</td>
+          <td>Fidji (République des)</td>
+          <td>04 95 98 45 10</td>
+        </tr>
+        <tr>
+          <td>Denise Le Herve</td>
+          <td>alphonse.marchand@guilbert.com</td>
+          <td>Philippines</td>
+          <td>+33 7 83 93 28 84</td>
+        </tr>
+        <tr>
+          <td>Andrée Muller</td>
+          <td>victor14@gmail.com</td>
+          <td>Sénégal</td>
+          <td>01 10 22 88 50</td>
+        </tr>
+        <tr>
+          <td>Aurore Joly</td>
+          <td>paul.charles@free.fr</td>
+          <td>Madagascar</td>
+          <td>+33 (0)2 75 22 20 89</td>
+        </tr>
+        <tr>
+          <td>David Ollivier</td>
+          <td>timothee.traore@dias.net</td>
+          <td>Argentine</td>
+          <td>0181126490</td>
+        </tr>
+        <tr>
+          <td>Agnès Guibert</td>
+          <td>thibault.adrien@gaillard.net</td>
+          <td>Albanie</td>
+          <td>03 77 85 89 49</td>
+        </tr>
+        <tr>
+          <td>Isabelle Adam</td>
+          <td>eugene05@perrier.net</td>
+          <td>Royaume-Uni</td>
+          <td>+33 (0)5 39 78 06 53</td>
+        </tr>
+        <tr>
+          <td>Caroline Tanguy</td>
+          <td>renard.leon@noos.fr</td>
+          <td>Trinité et Tobago</td>
+          <td>+33 (0)4 60 36 75 50</td>
+        </tr>
+        <tr>
+          <td>Édouard Potier</td>
+          <td>marie61@wanadoo.fr</td>
+          <td>Nouvelle Calédonie</td>
+          <td>+33 6 99 69 42 05</td>
+        </tr>
+        <tr>
+          <td>Lucas Charrier</td>
+          <td>anastasie.dubois@laposte.net</td>
+          <td>Brésil</td>
+          <td>0216921055</td>
+        </tr>
+        <tr>
+          <td>Daniel Boyer-Delannoy</td>
+          <td>andre92@rodriguez.fr</td>
+          <td>Liban</td>
+          <td>+33 9 57 56 72 32</td>
+        </tr>
+        <tr>
+          <td>Sébastien de la Adam</td>
+          <td>wperez@live.com</td>
+          <td>Algérie</td>
+          <td>0699814350</td>
+        </tr>
+        <tr>
+          <td>Thierry Payet</td>
+          <td>xweber@langlois.org</td>
+          <td>Arménie</td>
+          <td>0577038011</td>
+        </tr>
+        <tr>
+          <td>Dominique Baron</td>
+          <td>francois21@chevallier.net</td>
+          <td>Irlande</td>
+          <td>+33 (0)1 24 12 38 31</td>
+        </tr>
+        <tr>
+          <td>Olivier Weiss</td>
+          <td>bernadette26@dbmail.com</td>
+          <td>Bolivie</td>
+          <td>+33 (0)9 34 99 67 25</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Illustration des animations</title> 
+    <style>
+@keyframes rotationX {
+  from {
+    transform: rotateX(30deg);
+  }
+  to {
+    transform: rotateX(390deg);
+  }
+}
+
+@keyframes rotationY {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes rotationZ {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.avant {
+  transform: translateZ(100px);
+}
+.haut {
+  transform: rotateX(90deg) translateZ(100px);
+}
+.gauche {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+.droite {
+  transform: rotateY(90deg) translateZ(100px);
+}
+.bas {
+  transform: rotateX(-90deg) translateZ(100px);
+}
+.arriere {
+  transform: rotateY(-180deg) translateZ(100px)
+}
+
+#cubea,#cubeb,#cubec,#cubed {
+  width:200px;
+  height:200px;
+  margin:100px auto;
+  transform-style:preserve-3d;
+}
+#cubea {
+  perspective:800px;
+}
+#cubeb {
+  animation:rotationX 3s ease infinite;
+}
+#cubec {
+  animation:rotationY 5s ease infinite;
+}
+#cubed {
+  animation:rotationZ 7s ease infinite;
+}
+    </style>
+  </head>
+  <body>
+    <h1>Un cube pour illustrer les animations</h1>
+    
+    <p>
+        Voici un joli cube. Source : http://stylescss.free.fr/v2-tricks/cube.php
+    </p>
+    
+    <div id="cubea">
+      <div id="cubeb">
+        <div id="cubec">
+          <div id="cubed">
+            <img class="face avant" src="chuck1.jpg" />
+            <img class="face haut" src="chuck2.jpg" />
+            <img class="face gauche" src="chuck3.jpg" />
+            <img class="face droite" src="chuck4.jpg" />
+            <img class="face bas" src="chuck5.jpg" />
+            <img class="face arriere" src="chuck6.jpg" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Objets</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Objets">
+    <meta name="author" content="Cyril Rabat">
+  </head>
+  <body>
+    <h1>Les objets</h1>
+    <p>Ouvrez la console...</p>
+<script>
+const person = {
+  lastname: "Rabat",
+  firstname: "Cyril",
+  display: function() {
+    console.log(this.firstname + " " + this.lastname);
+  }
+};
+
+console.log("Object.values(person) :");
+console.log(Object.values(person));
+
+console.log("Affichage avec for...of :");
+const actors = {
+  "Clint Eastwood": 1930,
+  "Chuck Norris": 1940,
+  "Tom Cruise": 1962
+};
+for(let [actor, birthdate] of Object.entries(actors))
+    console.log(actor + " = " + birthdate);
+    
+console.log("JSON.stringify(person) : " + JSON.stringify(person));
+console.log("JSON.stringify(actors) : " + JSON.stringify(actors));
+</script>
+  </body>
+</html>

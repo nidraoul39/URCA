@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Les chaînes de caractères - méthodes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Les chaînes de caractères - méthodes">
+    <meta name="author" content="Cyril Rabat">
+  </head>
+  <body>
+    <h1>Les chaînes de caractères - méthodes</h1>
+    <p>Ouvrez la console...</p>
+<script>
+// charAt, at, toUpperCase, slice
+let s = "chuck";
+console.log("s = " + s);
+console.log("s.charAt(0) : " + s.charAt(0)); // Affiche 'c'
+console.log("s.at(-4) : " + s.at(-4)); // Affiche 'h'
+console.log("toUpperCase : " + s.toUpperCase());
+console.log("après toUpperCase : " + s);
+console.log("t.slice(0, 2) : " + s.slice(0, 2));
+
+// trim, trimEnd
+let t = " Chuck Norris !!! \n ";
+console.log("t = `" + t + "`");
+console.log("t.trim() : `" + t.trim() + "`");
+console.log("t.trimEnd() : `" + t.trimEnd() + "`");
+
+// padStart, padEnd
+let t2 = "h !!!!";
+console.log("t2 = `" + t2 + "`");
+console.log("t2.padStart(10, 'O') : " + t2.padStart(10, 'O'));
+console.log("\"\".padEnd(10, '-') : " + "".padEnd(10, '-'));
+
+// replace, replaceAll
+let u = "Bonjour, bonjour !!!";
+console.log("u = `" + u + "`");
+console.log("u.replace(\"jour\", \"soir\") : " + u.replace("jour", "soir"));
+console.log("u.replaceAll(\"jour\", \"soir\") : " + u.replaceAll("jour", "soir"));
+</script>
+  </body>
+</html>

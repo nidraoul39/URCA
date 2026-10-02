@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Utilisation des classes CSS</title> 
+    <style>
+/* Les strong dans un li sont en rouge */
+li strong {
+    color: red;
+}
+
+/* Le premier p après un h1 est en bleu */
+h1 + p {
+    color: blue;
+}
+
+
+span {
+    color: blue;
+}
+div > span {
+    color: green;
+}
+    </style>
+  </head>
+  <body>
+    <h1>Bonjour tout le monde !</h1>
+    <p>
+      Un premier paragraphe.
+    </p>
+    <p>
+      Ceci est un <strong>élément important</strong>.
+    </p>
+    <ul>
+      <li> Un élément de liste </li>
+      <li> Un élément de liste avec un <strong>élément important</strong> </li>
+    </ul>
+    <div>
+      <span>
+        Premier span du div (en vert)
+        <span>
+          Span dans le premier span (en bleu)
+        </span>
+      </span>
+      <span>
+        Deuxième span du div (en vert)
+      </span>
+    </div>
+</article>
+  </body>
+</html>

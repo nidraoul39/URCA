@@ -1,0 +1,21 @@
+Nom court,Nom long,Nom complet,Formule chimique du groupe latéral
+G,Gly,Glycine,H
+A,Ala,Alanine,CH3
+V,Val,Valine,CHCH3CH3
+L,Leu,Leucine,CH2CHCH3CH3
+I,Ile,Isoleucine,CHCH3CH2CH3
+M,Met,Méthionine,CH2CH2SCH3
+P,Pro,Proline,CH2CH2CH2
+F,Phe,Phénylalanine,CH2C6H6
+W,Trp,Tryptophane,C8H6N
+S,Ser,Sérine,CH2OH
+T,Thr,Thréonine,CHOHCH3
+C,Cys,Cystéine,CH2SH
+N,Asn,Asparagine,CH2CONH2
+Q,Gln,Glutamine,CH2CH2CONH2
+Y,Tyr,Tyrosine,CH2C6H6OH
+K,Lys,Lysine,CH2CH2CH2CH2NH2
+R,Arg,Arginine,CH2CH2CH2NHCNH2
+H,His,Histidine,C3H3N2
+D,Asp,Aspartate,CH2COOH
+E,Glu,Glutamate,CH2CH2COOH

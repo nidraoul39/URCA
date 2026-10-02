@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Illustration de la grille</title> 
+    <style>
+.box {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 1px;
+}
+.magrille1 {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+}
+.magrille1 > div {
+    background-color: silver;
+}
+
+.magrille2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px 10px;
+}
+.magrille2 > div {
+    background-color: teal;
+}
+
+.magrille3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-auto-rows: minmax(100px, auto);
+    gap: 20px 10px;
+}
+.magrille3 > div {
+    background-color: teal;
+}
+.magrille4 {
+    margin: 10px;
+    display: grid;
+    font-weight: 1.2em;
+    font-family: "Segoe UI";
+}
+#titre {
+    font-weight: 500;
+    font-size: 1.5em;
+    padding: 10px;
+    grid-column: 1 / 3;
+    grid-row: 1;
+    text-align: center;
+    border: 5px solid #3595E4;
+    border-radius: 5px;
+    border-bottom-right-radius: 50px;
+    height: 2em;
+}
+#menu {
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+    grid-column: 1;
+    grid-row: 2 / 3;
+}
+#menu div:first-of-type {
+    font-weight: 800;
+    padding-bottom: 10px;
+}
+#contenu {
+    grid-column: 2;
+    grid-row: 2;
+}
+#footer {
+    font-style: italic;
+    padding: 10px;
+    grid-column: 2 / 3;
+    grid-row: 3;
+    text-align: center;
+    border: 5px solid #3595E4;
+    border-radius: 5px;
+    border-bottom-left-radius: 50px;
+    height: 2em;
+}
+    </style>
+  </head>
+  <body>
+    <h1>Bonjour tout le monde !</h1>
+    <p>
+      Une première grille avec 3 colonnes de largeur fixe.
+    </p>        
+    <div class="magrille1">
+      <div class="box">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue sem enim, id semper eros ultrices sit amet. Nullam ut condimentum justo. Aliquam vel ligula in purus faucibus rhoncus. Mauris et efficitur dolor. Integer finibus turpis eget bibendum tincidunt. Phasellus viverra eros nibh, non accumsan urna hendrerit in. Fusce in nisl aliquet, auctor magna eu, sagittis ipsum. Cras venenatis lorem quam, eget malesuada est consequat tincidunt. Fusce sodales interdum justo sed semper. Pellentesque a quam mauris. Aliquam ac efficitur nisl. Vivamus placerat nulla nec tincidunt hendrerit.
+      </div>
+      <div class="box">
+        Sed augue est, viverra id bibendum in, aliquam quis sapien. Vestibulum auctor justo at varius posuere. Proin accumsan nibh ante, ac tristique sem ultricies non. Donec malesuada sodales maximus. Quisque pellentesque tellus purus. Curabitur ac ullamcorper eros. Sed feugiat aliquam pellentesque. Sed scelerisque vitae sem vitae efficitur. Sed ultrices suscipit felis, nec ornare mi consequat non. Donec in mattis neque. In fringilla, mauris vitae ornare faucibus, lectus leo lacinia sem, ut pulvinar risus massa quis libero. Vestibulum lacinia rhoncus eleifend. Suspendisse commodo, diam volutpat sodales elementum, nulla justo varius tellus, ut efficitur nisi sapien vitae turpis. Fusce maximus odio at nunc auctor, sit amet pharetra velit pellentesque. Curabitur malesuada felis finibus est dictum facilisis.
+      </div>
+      <div class="box">
+        Duis condimentum pellentesque diam id mattis. Duis enim sem, efficitur eget ipsum a, pretium vestibulum velit. Proin et placerat ipsum. Donec eget nibh ultricies, viverra sem dapibus, auctor turpis. Pellentesque eget nisl tristique mauris pharetra convallis id id quam. Mauris sed nisi libero. Maecenas ultricies metus id consectetur sodales. Ut elit quam, finibus et est nec, mattis luctus justo. Quisque et nulla vestibulum, congue mi at, condimentum mi. Donec id arcu mauris. Ut felis arcu, condimentum sed eros id, sollicitudin gravida felis. Nunc at sapien id sapien pulvinar sollicitudin non egestas sapien.
+      </div>
+      <div class="box">
+        Quisque auctor id elit non pellentesque. Aenean vitae turpis et risus laoreet ullamcorper. Cras lacus nisl, maximus sit amet blandit tristique, dignissim et quam. Sed eu nisl et neque congue porta. Pellentesque ac nisi at orci cursus imperdiet. Mauris rutrum leo nec ullamcorper aliquet. Sed sodales eros at elit scelerisque aliquet. Duis eleifend mi et ipsum suscipit pretium. Morbi consequat tempor pretium. Praesent mollis orci ut ante dignissim, et congue enim mattis. Maecenas efficitur finibus leo, lobortis imperdiet odio ornare dictum. Suspendisse massa leo, varius eget magna a, sollicitudin lacinia urna. Etiam feugiat cursus convallis. Vestibulum sed leo viverra ipsum suscipit pellentesque. Nam et urna vel justo volutpat tristique. Morbi dapibus felis sit amet quam semper convallis.
+      </div>
+      <div class="box">
+        Nunc volutpat blandit mi, ac vulputate magna fermentum sit amet. Nunc condimentum sit amet nunc a sollicitudin. Praesent facilisis ipsum in hendrerit condimentum. Aliquam malesuada nulla mauris, sed commodo metus tempus et. Maecenas commodo erat at quam aliquet, vel iaculis ante gravida. Nullam bibendum sem augue, sit amet dictum justo sollicitudin sit amet. Cras nibh libero, laoreet sit amet porttitor ut, dignissim quis mi. Nullam tincidunt, justo eu tincidunt gravida, felis risus eleifend risus, vel gravida ante ex in velit.
+      </div>      
+      <div class="box">
+        Aenean consectetur nulla sed tortor consectetur tempus. Aliquam scelerisque pharetra elit, eu imperdiet mauris tincidunt vitae. Vestibulum est ex, ultricies in elementum a, dignissim sed eros. Vestibulum volutpat magna vel metus vehicula vulputate. Vestibulum semper nisi quis ultricies lobortis. Suspendisse a hendrerit diam. Vestibulum elit dolor, placerat vel lectus hendrerit, viverra feugiat lorem. Nullam eget felis id risus cursus pretium. Sed congue ipsum condimentum lorem aliquam ultrices. Nam placerat lorem elit, et convallis nisi varius ut. Mauris sit amet eros ex. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis eget massa mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+      </div>
+    </div>
+    <p>
+      Cette fois-ci, on utilise les fractions de largeur pour que le contenu s'étale sur toute la largeur.
+    </p>    
+    <div class="magrille2">
+      <div class="box">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue sem enim, id semper eros ultrices sit amet. Nullam ut condimentum justo. Aliquam vel ligula in purus faucibus rhoncus. Mauris et efficitur dolor. Integer finibus turpis eget bibendum tincidunt. Phasellus viverra eros nibh, non accumsan urna hendrerit in. Fusce in nisl aliquet, auctor magna eu, sagittis ipsum. Cras venenatis lorem quam, eget malesuada est consequat tincidunt. Fusce sodales interdum justo sed semper. Pellentesque a quam mauris. Aliquam ac efficitur nisl. Vivamus placerat nulla nec tincidunt hendrerit.
+      </div>
+      <div class="box">
+        Sed augue est, viverra id bibendum in, aliquam quis sapien. Vestibulum auctor justo at varius posuere. Proin accumsan nibh ante, ac tristique sem ultricies non. Donec malesuada sodales maximus. Quisque pellentesque tellus purus. Curabitur ac ullamcorper eros. Sed feugiat aliquam pellentesque. Sed scelerisque vitae sem vitae efficitur. Sed ultrices suscipit felis, nec ornare mi consequat non. Donec in mattis neque. In fringilla, mauris vitae ornare faucibus, lectus leo lacinia sem, ut pulvinar risus massa quis libero. Vestibulum lacinia rhoncus eleifend. Suspendisse commodo, diam volutpat sodales elementum, nulla justo varius tellus, ut efficitur nisi sapien vitae turpis. Fusce maximus odio at nunc auctor, sit amet pharetra velit pellentesque. Curabitur malesuada felis finibus est dictum facilisis.
+      </div>
+      <div class="box">
+        Duis condimentum pellentesque diam id mattis. Duis enim sem, efficitur eget ipsum a, pretium vestibulum velit. Proin et placerat ipsum. Donec eget nibh ultricies, viverra sem dapibus, auctor turpis. Pellentesque eget nisl tristique mauris pharetra convallis id id quam. Mauris sed nisi libero. Maecenas ultricies metus id consectetur sodales. Ut elit quam, finibus et est nec, mattis luctus justo. Quisque et nulla vestibulum, congue mi at, condimentum mi. Donec id arcu mauris. Ut felis arcu, condimentum sed eros id, sollicitudin gravida felis. Nunc at sapien id sapien pulvinar sollicitudin non egestas sapien.
+      </div>
+      <div class="box">
+        Quisque auctor id elit non pellentesque. Aenean vitae turpis et risus laoreet ullamcorper. Cras lacus nisl, maximus sit amet blandit tristique, dignissim et quam. Sed eu nisl et neque congue porta. Pellentesque ac nisi at orci cursus imperdiet. Mauris rutrum leo nec ullamcorper aliquet. Sed sodales eros at elit scelerisque aliquet. Duis eleifend mi et ipsum suscipit pretium. Morbi consequat tempor pretium. Praesent mollis orci ut ante dignissim, et congue enim mattis. Maecenas efficitur finibus leo, lobortis imperdiet odio ornare dictum. Suspendisse massa leo, varius eget magna a, sollicitudin lacinia urna. Etiam feugiat cursus convallis. Vestibulum sed leo viverra ipsum suscipit pellentesque. Nam et urna vel justo volutpat tristique. Morbi dapibus felis sit amet quam semper convallis.
+      </div>
+      <div class="box">
+        Nunc volutpat blandit mi, ac vulputate magna fermentum sit amet. Nunc condimentum sit amet nunc a sollicitudin. Praesent facilisis ipsum in hendrerit condimentum. Aliquam malesuada nulla mauris, sed commodo metus tempus et. Maecenas commodo erat at quam aliquet, vel iaculis ante gravida. Nullam bibendum sem augue, sit amet dictum justo sollicitudin sit amet. Cras nibh libero, laoreet sit amet porttitor ut, dignissim quis mi. Nullam tincidunt, justo eu tincidunt gravida, felis risus eleifend risus, vel gravida ante ex in velit.
+      </div>      
+      <div class="box">
+        Aenean consectetur nulla sed tortor consectetur tempus. Aliquam scelerisque pharetra elit, eu imperdiet mauris tincidunt vitae. Vestibulum est ex, ultricies in elementum a, dignissim sed eros. Vestibulum volutpat magna vel metus vehicula vulputate. Vestibulum semper nisi quis ultricies lobortis. Suspendisse a hendrerit diam. Vestibulum elit dolor, placerat vel lectus hendrerit, viverra feugiat lorem. Nullam eget felis id risus cursus pretium. Sed congue ipsum condimentum lorem aliquam ultrices. Nam placerat lorem elit, et convallis nisi varius ut. Mauris sit amet eros ex. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis eget massa mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+      </div>
+    </div>
+    <p>
+      Sur cette grille, on fixe la largeur des colonnes à 400px minimum.
+    </p>    
+    <div class="magrille3">
+      <div class="box">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue sem enim, id semper eros ultrices sit amet. Nullam ut condimentum justo. Aliquam vel ligula in purus faucibus rhoncus. Mauris et efficitur dolor. Integer finibus turpis eget bibendum tincidunt. Phasellus viverra eros nibh, non accumsan urna hendrerit in. Fusce in nisl aliquet, auctor magna eu, sagittis ipsum. Cras venenatis lorem quam, eget malesuada est consequat tincidunt. Fusce sodales interdum justo sed semper. Pellentesque a quam mauris. Aliquam ac efficitur nisl. Vivamus placerat nulla nec tincidunt hendrerit.
+      </div>
+      <div class="box">
+        Sed augue est, viverra id bibendum in, aliquam quis sapien. Vestibulum auctor justo at varius posuere. Proin accumsan nibh ante, ac tristique sem ultricies non. Donec malesuada sodales maximus. Quisque pellentesque tellus purus. Curabitur ac ullamcorper eros. Sed feugiat aliquam pellentesque. Sed scelerisque vitae sem vitae efficitur. Sed ultrices suscipit felis, nec ornare mi consequat non. Donec in mattis neque. In fringilla, mauris vitae ornare faucibus, lectus leo lacinia sem, ut pulvinar risus massa quis libero. Vestibulum lacinia rhoncus eleifend. Suspendisse commodo, diam volutpat sodales elementum, nulla justo varius tellus, ut efficitur nisi sapien vitae turpis. Fusce maximus odio at nunc auctor, sit amet pharetra velit pellentesque. Curabitur malesuada felis finibus est dictum facilisis.
+      </div>
+      <div class="box">
+        Duis condimentum pellentesque diam id mattis. Duis enim sem, efficitur eget ipsum a, pretium vestibulum velit. Proin et placerat ipsum. Donec eget nibh ultricies, viverra sem dapibus, auctor turpis. Pellentesque eget nisl tristique mauris pharetra convallis id id quam. Mauris sed nisi libero. Maecenas ultricies metus id consectetur sodales. Ut elit quam, finibus et est nec, mattis luctus justo. Quisque et nulla vestibulum, congue mi at, condimentum mi. Donec id arcu mauris. Ut felis arcu, condimentum sed eros id, sollicitudin gravida felis. Nunc at sapien id sapien pulvinar sollicitudin non egestas sapien.
+      </div>
+      <div class="box">
+        Quisque auctor id elit non pellentesque. Aenean vitae turpis et risus laoreet ullamcorper. Cras lacus nisl, maximus sit amet blandit tristique, dignissim et quam. Sed eu nisl et neque congue porta. Pellentesque ac nisi at orci cursus imperdiet. Mauris rutrum leo nec ullamcorper aliquet. Sed sodales eros at elit scelerisque aliquet. Duis eleifend mi et ipsum suscipit pretium. Morbi consequat tempor pretium. Praesent mollis orci ut ante dignissim, et congue enim mattis. Maecenas efficitur finibus leo, lobortis imperdiet odio ornare dictum. Suspendisse massa leo, varius eget magna a, sollicitudin lacinia urna. Etiam feugiat cursus convallis. Vestibulum sed leo viverra ipsum suscipit pellentesque. Nam et urna vel justo volutpat tristique. Morbi dapibus felis sit amet quam semper convallis.
+      </div>
+      <div class="box">
+        Nunc volutpat blandit mi, ac vulputate magna fermentum sit amet. Nunc condimentum sit amet nunc a sollicitudin. Praesent facilisis ipsum in hendrerit condimentum. Aliquam malesuada nulla mauris, sed commodo metus tempus et. Maecenas commodo erat at quam aliquet, vel iaculis ante gravida. Nullam bibendum sem augue, sit amet dictum justo sollicitudin sit amet. Cras nibh libero, laoreet sit amet porttitor ut, dignissim quis mi. Nullam tincidunt, justo eu tincidunt gravida, felis risus eleifend risus, vel gravida ante ex in velit.
+      </div>      
+      <div class="box">
+        Aenean consectetur nulla sed tortor consectetur tempus. Aliquam scelerisque pharetra elit, eu imperdiet mauris tincidunt vitae. Vestibulum est ex, ultricies in elementum a, dignissim sed eros. Vestibulum volutpat magna vel metus vehicula vulputate. Vestibulum semper nisi quis ultricies lobortis. Suspendisse a hendrerit diam. Vestibulum elit dolor, placerat vel lectus hendrerit, viverra feugiat lorem. Nullam eget felis id risus cursus pretium. Sed congue ipsum condimentum lorem aliquam ultrices. Nam placerat lorem elit, et convallis nisi varius ut. Mauris sit amet eros ex. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis eget massa mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+      </div>
+    </div>
+    
+    <div class="magrille4">
+      <div id="menu">
+        <div> Menu </div>
+        <div> Lien 1 </div>
+        <div> Lien 2 </div>
+        <div> Lien 3 </div>
+      </div>
+      <div id="titre">
+        Voici un exemple de mise en page
+      </div>
+      <div id="contenu">
+        <p>
+          Nunc volutpat blandit mi, ac vulputate magna fermentum sit amet. Nunc condimentum sit amet nunc a sollicitudin. Praesent facilisis ipsum in hendrerit condimentum. Aliquam malesuada nulla mauris, sed commodo metus tempus et. Maecenas commodo erat at quam aliquet, vel iaculis ante gravida. Nullam bibendum sem augue, sit amet dictum justo sollicitudin sit amet. Cras nibh libero, laoreet sit amet porttitor ut, dignissim quis mi. Nullam tincidunt, justo eu tincidunt gravida, felis risus eleifend risus, vel gravida ante ex in velit.
+        </p>
+        <p>        
+          Aenean consectetur nulla sed tortor consectetur tempus. Aliquam scelerisque pharetra elit, eu imperdiet mauris tincidunt vitae. Vestibulum est ex, ultricies in elementum a, dignissim sed eros. Vestibulum volutpat magna vel metus vehicula vulputate. Vestibulum semper nisi quis ultricies lobortis. Suspendisse a hendrerit diam. Vestibulum elit dolor, placerat vel lectus hendrerit, viverra feugiat lorem. Nullam eget felis id risus cursus pretium. Sed congue ipsum condimentum lorem aliquam ultrices. Nam placerat lorem elit, et convallis nisi varius ut. Mauris sit amet eros ex. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis eget massa mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        </p>
+      </div>
+      <div id ="footer">
+        Contactez-moi cyril.rabat@univ-reims.fr
+      </div>
+    </div>    
+  </body>
+</html>

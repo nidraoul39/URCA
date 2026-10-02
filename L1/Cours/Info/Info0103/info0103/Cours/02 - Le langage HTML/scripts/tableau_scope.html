@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Utilisation de scope dans un tableau</title> 
+  </head>
+  <body>
+    <h1>Le scope dans un tableau</h1>
+    <p>
+      <table border="1">
+        <thead>
+          <tr>
+            <th></th>
+            <th></th>
+            <th colspan="2">Naissance</th>
+            <th colspan="2">Participations</th>
+          </tr>
+          <tr>
+            <th></th>
+            <th>Nom/prénom</th>
+            <th>Date</th>
+            <th>Lieu</th>
+            <th>Films</th>
+            <th>TV</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th rowspan="2">Hommes</th>
+            <th>Clint Eastwood</th>
+            <td>31/05/1930</td>
+            <td>San Francisco</td>
+            <td>84</td>
+            <td>14</td>
+          </tr>
+          <tr>
+            <th>Tom Cruise</th>
+            <td>03/07/1962</td>
+            <td>Syracuse</td>
+            <td>52</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <th rowspan="2">Femmes</th>
+            <th>Scarlett Johansson</th>
+            <td>22/11/1984</td>
+            <td>Manhattan</td>
+            <td>56</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <th>Sigourney Weaver</th>
+            <td>08/11/1949</td>
+            <td>Manhattan</td>
+            <td>65</td>
+            <td>15</td>
+          </tr>
+        </tbody>
+        <tfoot>
+        </tfoot>
+      </table>
+    </p>
+  </body>
+</html>

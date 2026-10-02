@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Taille des div</title> 
+    <style>
+#container {
+    border: 0px solid black;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    background-color: silver;
+}
+#boite {
+    border: 1px solid black;
+    background-color: teal;
+    width: 100px;
+    height: 100px;
+    padding: 0px;
+    margin: 0px;
+}
+    </style>
+  </head>
+  <body>
+    <h1>Taille des div</h1>
+    <div id="container">
+      <div id="boite">La</div>
+    </div>
+    <div id="displaydim">Taille occupée : 100 x 100</div>
+    <div>
+      <label for="setwidth">Width: </label>
+      <input type="range" id="setwidth" min="50" max="100" value="100" step="1" onchange="update('width')">
+      <span id="displaywidth">100</span>
+    </div>
+    <div>
+      <label for="setheight">Height: </label>
+      <input type="range" id="setheight" min="50" max="100" value="100" step="1" onchange="update('height')">
+      <span id="displayheight">100</span>
+    </div>
+    <div>
+      <label for="setmargin">Margin: </label>
+      <input type="range" id="setmargin" min="0" max="20" value="0" step="1" onchange="update('margin')">
+      <span id="displaymargin">0</span>
+    </div>
+    <div>
+      <label for="setmargintop">Margin-top: </label>
+      <input type="range" id="setmargintop" min="0" max="20" value="0" step="1" onchange="update('margintop')">
+      <span id="displaymargintop">0</span>
+    </div>
+    <div>
+      <label for="setmarginright">Margin-right: </label>
+      <input type="range" id="setmarginright" min="0" max="20" value="0" step="1" onchange="update('marginright')">
+      <span id="displaymarginright">0</span>
+    </div>
+    <div>
+      <label for="setmarginbottom">Margin-bottom: </label>
+      <input type="range" id="setmarginbottom" min="0" max="20" value="0" step="1" onchange="update('marginbottom')">
+      <span id="displaymarginbottom">0</span>
+    </div>
+    <div>
+      <label for="setmarginleft">Margin-left: </label>
+      <input type="range" id="setmarginleft" min="0" max="20" value="0" step="1" onchange="update('marginleft')">
+      <span id="displaymarginleft">0</span>
+    </div>
+    <div>
+      <label for="setpadding">Padding: </label>
+      <input type="range" id="setpadding" min="0" max="20" value="0" step="1" onchange="update('padding')">
+      <span id="displaypadding">0</span>
+    </div>
+    <div>
+      <label for="setpaddingtop">Padding-top: </label>
+      <input type="range" id="setpaddingtop" min="0" max="20" value="0" step="1" onchange="update('paddingtop')">
+      <span id="displaypaddingtop">0</span>
+    </div>
+    <div>
+      <label for="setpaddingright">Padding-right: </label>
+      <input type="range" id="setpaddingright" min="0" max="20" value="0" step="1" onchange="update('paddingright')">
+      <span id="displaypaddingright">0</span>
+    </div>
+    <div>
+      <label for="setpaddingbottom">Padding-bottom: </label>
+      <input type="range" id="setpaddingbottom" min="0" max="20" value="0" step="1" onchange="update('paddingbottom')">
+      <span id="displaypaddingbottom">0</span>
+    </div>
+    <div>
+      <label for="setpaddingleft">Padding-left: </label>
+      <input type="range" id="setpaddingleft" min="0" max="20" value="0" step="1" onchange="update('paddingleft')">
+      <span id="displaypaddingleft">0</span>
+    </div>
+    <div>
+      <label for="setborder">Border: </label>
+      <input type="range" id="setborder" min="0" max="10" value="1" step="1" onchange="update('border')">
+      <span id="displayborder">0</span>
+    </div>
+    <script>
+function updateDim() {
+    document.querySelector('#displaydim').innerHTML = "Taille occupée : " +
+        document.querySelector('#container').clientWidth + " x " +
+        document.querySelector('#container').clientHeight;
+    document.querySelector('#displaywidth').innerHTML = document.querySelector('#setwidth').value;
+    document.querySelector('#displayheight').innerHTML = document.querySelector('#setheight').value;
+    document.querySelector('#displaymargin').innerHTML = document.querySelector('#setmargin').value;
+    document.querySelector('#displaymargintop').innerHTML = document.querySelector('#setmargintop').value;
+    document.querySelector('#displaymarginright').innerHTML = document.querySelector('#setmarginright').value;
+    document.querySelector('#displaymarginbottom').innerHTML = document.querySelector('#setmarginbottom').value;
+    document.querySelector('#displaymarginleft').innerHTML = document.querySelector('#setmarginleft').value;
+    document.querySelector('#displaypadding').innerHTML = document.querySelector('#setpadding').value;
+    document.querySelector('#displaypaddingtop').innerHTML = document.querySelector('#setpaddingtop').value;
+    document.querySelector('#displaypaddingright').innerHTML = document.querySelector('#setpaddingright').value;
+    document.querySelector('#displaypaddingbottom').innerHTML = document.querySelector('#setpaddingbottom').value;
+    document.querySelector('#displaypaddingleft').innerHTML = document.querySelector('#setpaddingleft').value;
+    document.querySelector('#displayborder').innerHTML = document.querySelector('#setborder').value;
+}
+function update(type) {
+    switch(type) {
+        case 'width':
+            document.querySelector('#boite').style.width = document.querySelector('#setwidth').value + "px";
+            break;
+        case 'height':
+            document.querySelector('#boite').style.height = document.querySelector('#setheight').value + "px";
+            break;
+        case 'margin':
+            document.querySelector('#boite').style.margin = document.querySelector('#setmargin').value + "px";
+            document.querySelector('#setmargintop').value = document.querySelector('#setmargin').value;
+            document.querySelector('#setmarginright').value = document.querySelector('#setmargin').value;
+            document.querySelector('#setmarginbottom').value = document.querySelector('#setmargin').value;
+            document.querySelector('#setmarginleft').value = document.querySelector('#setmargin').value;
+            break;
+        case 'margintop':
+            document.querySelector('#boite').style.marginTop = document.querySelector('#setmargintop').value + "px";
+            break;
+        case 'marginright':
+            document.querySelector('#boite').style.marginRight = document.querySelector('#setmarginright').value + "px";
+            break;
+        case 'marginbottom':
+            document.querySelector('#boite').style.marginBottom = document.querySelector('#setmarginbottom').value + "px";
+            break;
+        case 'marginleft':
+            document.querySelector('#boite').style.marginLeft = document.querySelector('#setmarginleft').value + "px";
+            break;
+        case 'padding':
+            document.querySelector('#boite').style.padding = document.querySelector('#setpadding').value + "px";
+            break;
+        case 'paddingtop':
+            document.querySelector('#boite').style.paddingTop = document.querySelector('#setpaddingtop').value + "px";
+            break;
+        case 'paddingright':
+            document.querySelector('#boite').style.paddingRight = document.querySelector('#setpaddingright').value + "px";
+            break;
+        case 'paddingbottom':
+            document.querySelector('#boite').style.paddingBottom = document.querySelector('#setpaddingbottom').value + "px";
+            break;
+        case 'paddingleft':
+            document.querySelector('#boite').style.paddingLeft = document.querySelector('#setpaddingleft').value + "px";
+            break;
+        case 'border':
+            document.querySelector('#boite').style.border = document.querySelector('#setborder').value + "px solid black";
+            break;
+    }
+    updateDim();
+}
+window.addEventListener("load", (event) => {
+  updateDim();
+});
+    </script>
+  </body>
+</html>

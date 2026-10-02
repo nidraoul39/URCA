@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>formulaire</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="formulair">
+        <form action="https://www.cyrilrabat.fr/test.php" method="post">
+            <div class="ligne">
+                <label for="login">Login : </label>
+                <input type="text"  id="login" name="login" autofocus required>
+            </div>
+            
+           <div class="ligne">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password" required> <br>
+           </div>
+
+
+            <div class="ligne">
+                <fieldset>
+                <legend>choix de l'option1</legend>
+                    <label for="opt1_1">option1<label>
+                    <input id="opt1_1" type="radio" name="opt1" value="opt1_1">
+                    <label for="opt1_2">option2<label>
+                    <input id="opt1_2" type="radio" name="opt1" value="opt1_2">
+                    <label for="opt1_3">option 3<label>
+                    <input id="opt1_3" type="radio" name="opt1" value="opt1_3">
+                </fieldset>    
+            </div>
+
+            <div class="ligne">
+                <fieldset>
+                    <legend>choix de l'option2</legend>
+                    <label for="opt2_1">Option 1</label>
+                    <input type="checkbox" name="opt2_1" id="opt2_1">
+                    <label for="opt2_2">option 2</label>
+                    <input type="checkbox" name="opt2_2" id="opt2_2">
+                    <label for="opt2_3"> option 3</label>
+                    <input type="checkbox" name="opt2_3" id="opt2_3">
+                </fieldset>
+            </div>
+
+            <div class="ligne">
+                <select name="liste">
+                    <option value="1">Niveau 1</option>
+                    <option value="2" selected>Niveau 2</option>
+                    <option value="3">Niveau 3</option>
+                </select>
+            </div>
+            <div class="ligne">
+                <input type="submit" value="Validé">
+            </div>
+            <div class="ligne">
+                <input type="reset" value="Réinitialiser">
+            </div>
+        
+        </form>
+    </div>
+</body>
+</html>

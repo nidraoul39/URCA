@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Illustration d'une image adaptative</title> 
+  </head>
+  <body>
+    <h1>Illustration d'une image adaptative</h1>
+    <p>
+      Avec srcset et sizes :<br/>
+      <img srcset="images/chat_petit.png 600w,
+                   images/chat_medium.png 800w,
+                   images/chat_large.png 1400w"
+           sizes="(max-width: 600px) 600px,
+                  (max-width: 800px) 800px,
+                  1400px"
+           src="images/chat_large.png"
+           alt="Oh ! Un chat !"/><br/>
+      Uniquement avec srcset :<br/>
+      <img srcset="images/chat_petit.png,
+                   images/chat_medium.png 1.5x,
+                   images/chat_large.png 2x"
+           src="images/chat_large.png"
+           alt="Oh ! Un chat !"/>
+    </p>
+    <p>
+      Pour voir la différence, vous devez redimenssionner votre terminal, voire recharger la page (en forçant le vidage du cache).
+    </p>
+  </body>
+</html>

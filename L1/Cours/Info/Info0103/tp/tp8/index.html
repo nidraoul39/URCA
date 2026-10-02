@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>formulaire</title>
+</head>
+    <body>
+        <form action="" method="get">
+            <label for="username">Nom Prenom : </label>
+            <input type="text" required id="nomprenom" name="nomprenom" >
+            <br>
+            <label for="login">login : </label>
+            <input type="text" id="login" name="login" pattern="[a-z A-Z]{5,20}" required ><br>
+            <label for="text">Password</label>
+            <input type="password" required id="password" name="password" minlength="8" maxlength="15" pattern="[a-z A-Z]*[A-Z][a-z A-Z]*">
+            <input type="submit" placeholder="valider">
+        </form>
+    </body>
+</html>

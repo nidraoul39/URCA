@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Illustration de Flexbox</title> 
+    <style>
+.box {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 1px;
+}
+.maflex {
+    display: flex;
+}
+.maflex > div {
+    background-color: silver;
+    flex: 1;
+}
+.maflex2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+.maflex2 > div {
+    background-color: teal;
+    flex: 200px;
+}
+    </style>
+  </head>
+  <body>
+    <h1>Bonjour tout le monde !</h1>
+    <p>
+      Pour observer le comportement de <i>flex</i>, réduisez la largeur de la fenêtre du navigateur.
+    </p>
+    <p>
+      Ici, si la taille de l'écran n'est pas suffisante, les boîtes dépassent le conteneur (un ascensseur vertical apparait).
+    </p>
+    <div class="maflex">
+      <div class="box">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue sem enim, id semper eros ultrices sit amet. Nullam ut condimentum justo. Aliquam vel ligula in purus faucibus rhoncus. Mauris et efficitur dolor. Integer finibus turpis eget bibendum tincidunt. Phasellus viverra eros nibh, non accumsan urna hendrerit in. Fusce in nisl aliquet, auctor magna eu, sagittis ipsum. Cras venenatis lorem quam, eget malesuada est consequat tincidunt. Fusce sodales interdum justo sed semper. Pellentesque a quam mauris. Aliquam ac efficitur nisl. Vivamus placerat nulla nec tincidunt hendrerit.
+      </div>
+      <div class="box">
+        Sed augue est, viverra id bibendum in, aliquam quis sapien. Vestibulum auctor justo at varius posuere. Proin accumsan nibh ante, ac tristique sem ultricies non. Donec malesuada sodales maximus. Quisque pellentesque tellus purus. Curabitur ac ullamcorper eros. Sed feugiat aliquam pellentesque. Sed scelerisque vitae sem vitae efficitur. Sed ultrices suscipit felis, nec ornare mi consequat non. Donec in mattis neque. In fringilla, mauris vitae ornare faucibus, lectus leo lacinia sem, ut pulvinar risus massa quis libero. Vestibulum lacinia rhoncus eleifend. Suspendisse commodo, diam volutpat sodales elementum, nulla justo varius tellus, ut efficitur nisi sapien vitae turpis. Fusce maximus odio at nunc auctor, sit amet pharetra velit pellentesque. Curabitur malesuada felis finibus est dictum facilisis.
+      </div>
+      <div class="box">
+        Duis condimentum pellentesque diam id mattis. Duis enim sem, efficitur eget ipsum a, pretium vestibulum velit. Proin et placerat ipsum. Donec eget nibh ultricies, viverra sem dapibus, auctor turpis. Pellentesque eget nisl tristique mauris pharetra convallis id id quam. Mauris sed nisi libero. Maecenas ultricies metus id consectetur sodales. Ut elit quam, finibus et est nec, mattis luctus justo. Quisque et nulla vestibulum, congue mi at, condimentum mi. Donec id arcu mauris. Ut felis arcu, condimentum sed eros id, sollicitudin gravida felis. Nunc at sapien id sapien pulvinar sollicitudin non egestas sapien.
+      </div>
+      <div class="box">
+        Quisque auctor id elit non pellentesque. Aenean vitae turpis et risus laoreet ullamcorper. Cras lacus nisl, maximus sit amet blandit tristique, dignissim et quam. Sed eu nisl et neque congue porta. Pellentesque ac nisi at orci cursus imperdiet. Mauris rutrum leo nec ullamcorper aliquet. Sed sodales eros at elit scelerisque aliquet. Duis eleifend mi et ipsum suscipit pretium. Morbi consequat tempor pretium. Praesent mollis orci ut ante dignissim, et congue enim mattis. Maecenas efficitur finibus leo, lobortis imperdiet odio ornare dictum. Suspendisse massa leo, varius eget magna a, sollicitudin lacinia urna. Etiam feugiat cursus convallis. Vestibulum sed leo viverra ipsum suscipit pellentesque. Nam et urna vel justo volutpat tristique. Morbi dapibus felis sit amet quam semper convallis.
+      </div>
+      <div class="box">
+        Nunc volutpat blandit mi, ac vulputate magna fermentum sit amet. Nunc condimentum sit amet nunc a sollicitudin. Praesent facilisis ipsum in hendrerit condimentum. Aliquam malesuada nulla mauris, sed commodo metus tempus et. Maecenas commodo erat at quam aliquet, vel iaculis ante gravida. Nullam bibendum sem augue, sit amet dictum justo sollicitudin sit amet. Cras nibh libero, laoreet sit amet porttitor ut, dignissim quis mi. Nullam tincidunt, justo eu tincidunt gravida, felis risus eleifend risus, vel gravida ante ex in velit.
+      </div>      
+      <div class="box">
+        Aenean consectetur nulla sed tortor consectetur tempus. Aliquam scelerisque pharetra elit, eu imperdiet mauris tincidunt vitae. Vestibulum est ex, ultricies in elementum a, dignissim sed eros. Vestibulum volutpat magna vel metus vehicula vulputate. Vestibulum semper nisi quis ultricies lobortis. Suspendisse a hendrerit diam. Vestibulum elit dolor, placerat vel lectus hendrerit, viverra feugiat lorem. Nullam eget felis id risus cursus pretium. Sed congue ipsum condimentum lorem aliquam ultrices. Nam placerat lorem elit, et convallis nisi varius ut. Mauris sit amet eros ex. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis eget massa mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+      </div>
+    </div>    
+    <p>
+      Là, les boîtes font 200px minimum. Si la largeur de l'écran n'est pas suffisante, elle s'affichent à la ligne si nécessaire.
+    </p>    
+    <div class="maflex2">
+      <div class="box">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue sem enim, id semper eros ultrices sit amet. Nullam ut condimentum justo. Aliquam vel ligula in purus faucibus rhoncus. Mauris et efficitur dolor. Integer finibus turpis eget bibendum tincidunt. Phasellus viverra eros nibh, non accumsan urna hendrerit in. Fusce in nisl aliquet, auctor magna eu, sagittis ipsum. Cras venenatis lorem quam, eget malesuada est consequat tincidunt. Fusce sodales interdum justo sed semper. Pellentesque a quam mauris. Aliquam ac efficitur nisl. Vivamus placerat nulla nec tincidunt hendrerit.
+      </div>
+      <div class="box">
+        Sed augue est, viverra id bibendum in, aliquam quis sapien. Vestibulum auctor justo at varius posuere. Proin accumsan nibh ante, ac tristique sem ultricies non. Donec malesuada sodales maximus. Quisque pellentesque tellus purus. Curabitur ac ullamcorper eros. Sed feugiat aliquam pellentesque. Sed scelerisque vitae sem vitae efficitur. Sed ultrices suscipit felis, nec ornare mi consequat non. Donec in mattis neque. In fringilla, mauris vitae ornare faucibus, lectus leo lacinia sem, ut pulvinar risus massa quis libero. Vestibulum lacinia rhoncus eleifend. Suspendisse commodo, diam volutpat sodales elementum, nulla justo varius tellus, ut efficitur nisi sapien vitae turpis. Fusce maximus odio at nunc auctor, sit amet pharetra velit pellentesque. Curabitur malesuada felis finibus est dictum facilisis.
+      </div>
+      <div class="box">
+        Duis condimentum pellentesque diam id mattis. Duis enim sem, efficitur eget ipsum a, pretium vestibulum velit. Proin et placerat ipsum. Donec eget nibh ultricies, viverra sem dapibus, auctor turpis. Pellentesque eget nisl tristique mauris pharetra convallis id id quam. Mauris sed nisi libero. Maecenas ultricies metus id consectetur sodales. Ut elit quam, finibus et est nec, mattis luctus justo. Quisque et nulla vestibulum, congue mi at, condimentum mi. Donec id arcu mauris. Ut felis arcu, condimentum sed eros id, sollicitudin gravida felis. Nunc at sapien id sapien pulvinar sollicitudin non egestas sapien.
+      </div>
+      <div class="box">
+        Quisque auctor id elit non pellentesque. Aenean vitae turpis et risus laoreet ullamcorper. Cras lacus nisl, maximus sit amet blandit tristique, dignissim et quam. Sed eu nisl et neque congue porta. Pellentesque ac nisi at orci cursus imperdiet. Mauris rutrum leo nec ullamcorper aliquet. Sed sodales eros at elit scelerisque aliquet. Duis eleifend mi et ipsum suscipit pretium. Morbi consequat tempor pretium. Praesent mollis orci ut ante dignissim, et congue enim mattis. Maecenas efficitur finibus leo, lobortis imperdiet odio ornare dictum. Suspendisse massa leo, varius eget magna a, sollicitudin lacinia urna. Etiam feugiat cursus convallis. Vestibulum sed leo viverra ipsum suscipit pellentesque. Nam et urna vel justo volutpat tristique. Morbi dapibus felis sit amet quam semper convallis.
+      </div>
+      <div class="box">
+        Nunc volutpat blandit mi, ac vulputate magna fermentum sit amet. Nunc condimentum sit amet nunc a sollicitudin. Praesent facilisis ipsum in hendrerit condimentum. Aliquam malesuada nulla mauris, sed commodo metus tempus et. Maecenas commodo erat at quam aliquet, vel iaculis ante gravida. Nullam bibendum sem augue, sit amet dictum justo sollicitudin sit amet. Cras nibh libero, laoreet sit amet porttitor ut, dignissim quis mi. Nullam tincidunt, justo eu tincidunt gravida, felis risus eleifend risus, vel gravida ante ex in velit.
+      </div>      
+      <div class="box">
+        Aenean consectetur nulla sed tortor consectetur tempus. Aliquam scelerisque pharetra elit, eu imperdiet mauris tincidunt vitae. Vestibulum est ex, ultricies in elementum a, dignissim sed eros. Vestibulum volutpat magna vel metus vehicula vulputate. Vestibulum semper nisi quis ultricies lobortis. Suspendisse a hendrerit diam. Vestibulum elit dolor, placerat vel lectus hendrerit, viverra feugiat lorem. Nullam eget felis id risus cursus pretium. Sed congue ipsum condimentum lorem aliquam ultrices. Nam placerat lorem elit, et convallis nisi varius ut. Mauris sit amet eros ex. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis eget massa mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+      </div>
+    </div>    
+  </body>
+</html>

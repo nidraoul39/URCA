@@ -1,0 +1,25 @@
+.conteneur {
+  display: grid;
+  place-content: center;
+}
+.contenu {
+  width: 50%;
+  min-width: 400px;
+  height: 200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  border-radius: 5px;
+  border: 1px solid black;
+  overflow: auto;
+}
+button {
+  margin: 10px auto;
+}
+h1 {
+  margin: 10px auto;
+}
+body {
+  font-family: monospace;
+}

@@ -1,0 +1,138 @@
+body{
+    background-color: black;
+    color: white;
+    font-size: 1.2em;
+}
+.licence{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 250px 1fr 1fr;
+    background-color: black;
+    color: white;
+    font-size: 1.2em;
+}
+#logo{
+    grid-column: 2/3;
+    grid-row: 1/2;
+
+}
+.text::first-letter{
+    color: brown;
+    font-weight: bold;
+    font-size: xx-large;
+
+}
+
+label>p{
+    display: inline-block;
+}
+.champ{
+    display: block;
+    padding: 20px;
+}
+
+h1{
+    background-image: linear-gradient(90deg , gray 30%, black 80%);
+    border: 1px solid #E5E7E9;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+figure{
+    text-align: center;
+}
+figcaption{
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+#contenu{
+    padding-left: 20px;
+    padding-right: 20px;
+    grid-column: 3/6;
+    grid-row: 1/3;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+#logo {
+    text-align: center;
+}
+
+#logo img:hover {
+    transform: rotateY(360deg);
+    transition: transform 2s;
+}
+
+
+
+
+
+
+
+
+
+#menu{
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+#menu>nav>ul>li>a{
+    display: block;
+    border: gray 1px solid;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    text-decoration: none;
+    background-color: gray;
+
+}
+#menu>nav>ul>li>a:hover{
+    background-color: white;
+    transition-duration: 2s;
+}
+#menu>nav>ul>li{
+    list-style: none;
+    
+}
+.selected{
+    opacity: 0.5;
+}
+#footer{
+    text-align: center;
+    font-size: 0.8em;
+    margin: 20px;
+    grid-column: 2/6;
+    grid-row: 3/4;
+
+}
+table{
+    width: 100%;
+    border: white 2px solid;
+    text-align: center;
+    font-size: 0.8em;
+    border-collapse: collapse;
+
+}
+th, td{
+    padding: 5px;
+    border: white 2px solid;
+
+}
+th{
+    background-color: grey;
+}
+.icon{
+    padding-right: 4px;
+}

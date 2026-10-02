@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Illustration des animations</title> 
+    <style>
+/* Une animation : une image qui tourne ! */
+#anim1 {
+  animation-duration: 1s;
+  animation-name: anim1;
+  animation-iteration-count: infinite;
+}
+@keyframes anim1 {
+    from {
+        width: 200px;
+    }
+    50% {
+        width: 100px;
+        rotate: 180deg;
+    }
+    to {
+        width: 200px;
+    }
+}
+
+/* La boîte qui tourne quand on passe dessus */
+.box {
+    color: red;
+    width: 100px;
+    height: 100px;
+    margin: 100px;
+    transition: 1s transform;
+    border: 1px solid black;
+}
+.box:hover {
+    color: blue;
+    transform: rotate(180deg);
+}
+
+/* Une transformation toute simple */
+.transform {
+    transform: rotate(90deg);
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+}
+
+/* Un cube formé de 3 faces */
+#cube {  
+    width: 200px;
+    height: 200px;
+    margin: 100px auto;
+    transform: rotateX(-45deg) rotateY(30deg);
+    transform-style: preserve-3d;
+}
+.face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+}
+.avant {
+    transform: translateZ(100px);
+}
+.haut {
+    transform: rotateX(90deg) translateZ(100px);
+}
+.gauche {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+#container {
+    width: 200px;
+    height: 200px;
+}
+    </style>
+  </head>
+  <body>
+    <h1>Quelques animations</h1>
+    
+    <p> Voici une animation toute simple :</p>
+    <div id="container" style="padding: 100px">
+      <img id="anim1" src="chuck2.png" width="200px"/>
+    </div>
+    
+    <p> Une boîte qui s'anime si on passe dessus avec la souris :</p>
+    <div class="box">
+      Oh la belle boîte !
+    </div>
+    
+    <p> Une simple boîte :</p>
+    <div class="transform">
+      Oh la belle boîte transformée !
+    </div>
+    
+    <p> Un cube formé de 3 div déformés :</p>
+    <div id="cube">
+		<img class="face avant" src="chuck1.jpg"/>
+		<img class="face haut" src="chuck2.jpg"/>
+		<img class="face gauche" src="chuck3.jpg"/>
+	</div>
+    
+  </body>
+</html>

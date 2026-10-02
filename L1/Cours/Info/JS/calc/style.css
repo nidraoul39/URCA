@@ -1,0 +1,21 @@
+.calculator {
+  width: 200px;
+  border: solid 1px black;
+  padding: 2px;
+}
+.calculator > div {
+  text-align: center;
+}
+#display {
+  text-align: left;
+  padding: 2px;
+  width: calc(100%-6px);
+  height: 40px;
+  border: black solid 1px;
+}
+button {
+  height: 40px;
+  width: 40px;
+  padding: 2px;
+  margin: 2px;
+}

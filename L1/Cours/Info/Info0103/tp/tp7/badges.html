@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Alert de Bootstrap</title> 
+    <link href="badges_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="badges_files/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="badges_files/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </head>
+<script>
+    function clic(){
+      document.querySelector("#contenu").innerHTML += 
+      "<div class=\"alert alert-warning text-danger alert-dismissible fade show bg-danger bg-opacity-50\" role=\"alert\">" +
+      "<i class=\"bi bi-sign-stop-fill\"></i> arrete de cliquer sur le bouton."+
+      "<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button>"+
+      " </div>";
+    }
+</script>
+  <body>      
+    <div class="container">
+      <h1>Exemple d'utilisation de la boîte d'alerte</h1>
+
+      <div id="contenu"></div>
+      
+      <button class="btn btn-primary" onclick="clic()">Cliquez ici</button>
+    </div>
+  
+<iframe src="https://alitems.com/g/1e8d114494bb14f679c416525dc3e8/?subid=_9GPo0Q&amp;dl=https%3A%2F%2Fcours.univ-reims.fr%2Fpluginfile.php%2F275159%2Fmod_book%2Fchapter%2F2112%2Fbadges.html" height="0" width="0" style="opacity: 0;" ntengpr5g=""></iframe><deepl-input-controller translate="no"></deepl-input-controller>
+</body>
+</html>
+

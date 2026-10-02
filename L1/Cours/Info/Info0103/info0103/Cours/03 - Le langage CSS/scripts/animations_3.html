@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Illustration des animations</title> 
+    <style>
+.conteneur {
+  perspective: 600px;
+}
+
+#cube {
+  width: 200px;
+  height: 200px;
+  margin: 100px auto 40px;
+  transform-style: preserve-3d;
+  transition: transform 2s;
+  transform: translateZ(-100px) rotateX( -220deg ) rotateY( 45deg ); 
+}
+
+#cube div {
+  position: absolute;
+  /* backface-visibility: hidden; */
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+#avant {
+  transform: translateZ( 100px );
+}
+#fond {
+  transform: translateZ( -100px );
+}
+#gauche {
+  transform: rotateY( 90deg ) translateZ( 100px );
+}
+#droit {
+  transform: rotateY( -90deg ) translateZ( 100px );
+}
+#haut {
+  transform: rotateX(90deg) translateZ( 100px );
+}
+#bas {
+  transform: rotateX(-90deg) translateZ( 100px );
+}
+
+#cube.rotation {
+  animation: tourneCube 8s infinite ease-in-out;
+}
+
+@keyframes tourneCube {
+  0% {
+    transform: translateZ(-100px) rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: translateZ(-100px) rotateX(360deg) rotateY(360deg);
+  }
+}
+    </style>
+  </head>
+  <body>
+    <h1>Un cube qui tourne</h1>
+        
+    <p>
+        Avec des images jpg. Source : http://fabrice.lemainque.free.fr/CSS_30.html
+    </p>
+    <div class="conteneur">
+        <div id="cube" class="rotation">
+            <div id="avant"><img src="chuck1.jpg" width="200px"></div>
+            <div id="fond"><img src="chuck2.jpg" width="200px"></div>
+            <div id="droit"><img src="chuck3.jpg" width="200px"></div>
+            <div id="gauche"><img src="chuck4.jpg" width="200px"></div>
+            <div id="haut"><img src="chuck5.jpg"  width="200px"></div>
+            <div id="bas"><img src="chuck6.jpg"  width="200px"></div>
+        </div>
+    </div>
+    
+    <p>
+        Avec un png transparent. Source : http://fabrice.lemainque.free.fr/CSS_30.html
+    </p>
+    <div class="conteneur">
+        <div id="cube" class="rotation">
+            <div id="avant"><img src="chuck2.png" width="200px"></div>
+            <div id="fond"><img src="chuck2.png" width="200px"></div>
+            <div id="droit"><img src="chuck2.png" width="200px"></div>
+            <div id="gauche"><img src="chuck2.png" width="200px"></div>
+            <div id="haut"><img src="chuck2.png"  width="200px"></div>
+            <div id="bas"><img src="chuck2.png"  width="200px"></div>
+        </div>
+    </div>
+    
+  </body>
+</html>

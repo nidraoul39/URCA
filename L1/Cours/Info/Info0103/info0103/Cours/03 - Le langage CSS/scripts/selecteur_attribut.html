@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Selcteur attribut</title> 
+    <style>
+[monattribut] {
+    font-weight: 200;
+    font-family: "Segoe UI";
+}
+p[monattribut="bleu"] {
+    color: blue;
+}
+p[monattribut="rouge"] {
+    color: red;
+}
+    </style>
+  </head>
+  <body>
+    <h1 monattribut="">Le sélecteur attribut</h1>
+    <p monattribut="bleu">
+      Ce paragraphe possède l'attribut <i>monattribut</i> dont la valeur est <i>bleu</i>.
+    </p>
+    <p monattribut="rouge">
+      Ce paragraphe possède l'attribut <i>monattribut</i> dont la valeur est <i>rouge</i>.
+    </p>
+  </body>
+</html>

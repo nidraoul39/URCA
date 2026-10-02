@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<console_sales>
+    <console>
+        <name>PlayStation</name>
+        <sales_units>Plus de 102.49 millions</sales_units>
+        <release_date>1994-12-03</release_date>
+        <notes>Chiffres de ventes cumulés pour PlayStation et PS one au 31 mars 2012.</notes>
+    </console>
+    <console>
+        <name>PlayStation 2</name>
+        <sales_units>Plus de 160 millions</sales_units>
+        <release_date>2000-03-04</release_date>
+        <notes>Chiffres de ventes au 31 mars 2012.</notes>
+    </console>
+    <console>
+        <name>PlayStation 3</name>
+        <sales_units>Plus de 87.4 millions</sales_units>
+        <release_date>2006-11-11</release_date>
+        <notes>Chiffres de ventes au 31 mars 2017.</notes>
+    </console>
+    <console>
+        <name>PlayStation Portable</name>
+        <sales_units>Plus de 76.4 millions</sales_units>
+        <release_date>2004-12-12</release_date>
+        <notes>Chiffres de ventes au 31 mars 2012.</notes>
+    </console>
+    <console>
+        <name>PlayStation Vita</name>
+        <sales_units>Estimé entre 15 et 16 millions</sales_units>
+        <release_date>2011-12-17</release_date>
+        <notes>Sony a cessé de divulguer les chiffres de ventes exacts après 4 millions en 2012. Estimations de mi-2017/septembre 2018.</notes>
+    </console>
+    <console>
+        <name>PlayStation 4</name>
+        <sales_units>Plus de 117 millions</sales_units>
+        <release_date>2013-11-15</release_date>
+        <notes>Chiffres de ventes au 30 juin 2022.</notes>
+    </console>
+    <console>
+        <name>PlayStation 5</name>
+        <sales_units>95 millions</sales_units>
+        <release_date>2020-11-12</release_date>
+        <notes>Chiffres de ventes au 30 juin 2026.</notes>
+    </console>
+</console_sales>

@@ -1,0 +1,7 @@
+Configuration: 
+	Fasta file name = mini_uniprot_sprot.fasta 
+	Verbose mode = False 
+	   17000.0 est le poids minimum accepté 
+sp|Q197F8|002R_IIV3
+sp|Q6GZX2|003R_FRG3G
+il y a 2 élément qui ont élé lue ! 
