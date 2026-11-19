@@ -1,0 +1,4 @@
+• La défaillance de validation : Le validateur automatique de CrowdStrike laisse passer un fichier de configuration corrompu (contenant 21 paramètres au lieu de 20).
+• Le bug de lecture (Out-of-bounds read) : Le logiciel Falcon Sensor reçoit le fichier et tente de lire cette 21e entrée inexistante, ce qui provoque immédiatement une erreur d'accès à la mémoire vive (RAM).
+• Le plantage du noyau (Kernel) : Comme cette erreur se produit au niveau le plus profond et le plus sensible du système informatique, le pilote de CrowdStrike plante complètement.
+• Le déclenchement du BSOD : Windows constate qu'un composant essentiel de son noyau a cessé de fonctionner et, par mesure de sécurité, coupe instantanément tout le système, provoquant l'écran bleu de la mort.

@@ -1,0 +1,43 @@
+
+192.168.100.15 dev eth1 lladdr 52:54:00:41:50:af STALE 
+
+nmap exploite l'arp en plus de l'icmp car si l'icmp repond pas (block ping) l'arp repond forcement en cas de reponse arp l'host est en vie
+b. Quelle est la différence entre -sn et un scan de ports classique (sans
+sn fais un ping pour verifier si l'hotes est alive
+ 
+ubuntu@A:~$ sudo nmap -sT -p 22,80,3306 192.168.100.15
+Starting Nmap 7.98 ( https://nmap.org ) at 2026-10-22 07:14 +0000
+Nmap scan report for 192.168.100.15
+Host is up (0.0021s latency).
+
+PORT     STATE  SERVICE
+22/tcp   open   ssh
+80/tcp   open   http
+3306/tcp closed mysql
+MAC Address: 52:54:00:41:50:AF (QEMU virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.60 seconds
+ubuntu@A:~$ nmap -F 192.168.100.15
+Starting Nmap 7.98 ( https://nmap.org ) at 2026-10-22 07:14 +0000
+Nmap scan report for 192.168.100.15
+Host is up (0.013s latency).
+Not shown: 98 closed tcp ports (conn-refused)
+PORT   STATE SERVICE
+22/tcp open  ssh
+80/tcp open  http
+
+il est plus bruyant qun simple ping car le ping verifie si l'hote est en vie est est effectué assez souvent par des service classique
+alors que nmap effectue plusiers requete par port pour verifier qu'un port est ouvert
+avoir une autorisation ecrite du propriétaire du réseau 
+
+nmap a d'autre solution pour scanner les hotes en local arp fonctionne tres bien
+
+
+mysql ecoute sur le 3306 par defaut 
+
+
+a. Pourquoi restreindre l'hôte à 192.168.100.% plutôt que 'webuser'@'%'
+si on ajoute un server web cela posera pas probleme alors que si lon rajoute plustard un serverr web ou change l'ip pour une raison x ou y on devras reconfigurer le server de bdd
+
+pour plus de securité on donne pas tousles privilege si on a plusieurs bdd 
+
